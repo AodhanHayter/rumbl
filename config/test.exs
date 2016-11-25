@@ -17,3 +17,7 @@ config :rumbl, Rumbl.Repo,
   database: "rumbl_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# Ease password hashing when running tests for speed
+config :comeonin, :bcrypt_log_rounds, 4
+config :comeonin, :pbkdf2_rounds, 1
